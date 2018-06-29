@@ -1,5 +1,8 @@
 # ES6 Converter App
 
+<h2 id="screenshots">Screenshots</h2>
+
+![](assets/screenshots/converter.png)
 
 ### Authors
 
