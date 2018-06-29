@@ -62,8 +62,8 @@ function fetchAnyAPI(url){
       keys.forEach(function(key){
       result = data[key];
        var convert = valueData.value * result;
-        console.log(convert);
-        li.innerHTML = convert;      
+        console.log(valueData.value, result);
+        li.innerHTML = from.value+" "+ convert.toFixed(2);      
      });
     })   
    
@@ -74,13 +74,17 @@ function fetchAnyAPI(url){
  */
   button.addEventListener('click', function (e) {
     e.preventDefault(); 
-    //combine currency
-    var combine = from.value+"_"+to.value
-    console.log(combine);
-    let resultData = conversionRate(combine);
+   
+    if(valueData.value === ""){
+      alert("The value field is empty");
     
-    //let convert = from.value * to.value
-    //valueData.value = "";
+    }else{
+       //combine currency
+      var combine = to.value + "_" + from.value
+      console.log(combine);
+      let resultData = conversionRate(combine);
+    }
+    
 
   });
 
