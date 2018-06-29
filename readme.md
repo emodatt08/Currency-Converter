@@ -2,7 +2,7 @@
 
 <h2 id="screenshots">Screenshots</h2>
 
-![](assets/screenshots/converter.png)
+![](assets/screenshots/converter.PNG)
 
 ### Authors
 
