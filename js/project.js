@@ -53,20 +53,19 @@ var fetchApi = () =>{
  * Makes API calls
  */
 function fetchAnyAPI(url){
-  var result = [];
+  // var result = [];
   fetch(url)
   .then((resp) => resp.json()) // Transform the data into json
   .then(function(data) {  
     // return Api data
-      var keys = Object.entries(data);
-      result.push(keys);
-    //   keys.forEach(function(key){
-    //    // console.log(data[key]);
-    //   result['data'] = data[key];
-      
-    //  });
+      var keys = Object.keys(data);    
+      keys.forEach(function(key){
+      result = data[key];
+       var convert = valueData.value * result;
+        console.log(convert);
+        li.innerHTML = convert;      
+     });
     })   
-    return result;
    
 } 
 
@@ -79,8 +78,7 @@ function fetchAnyAPI(url){
     var combine = from.value+"_"+to.value
     console.log(combine);
     let resultData = conversionRate(combine);
-    console.log(resultData.combine);
-    li.innerHTML = resultData;
+    
     //let convert = from.value * to.value
     //valueData.value = "";
 
