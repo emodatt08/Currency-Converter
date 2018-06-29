@@ -63,7 +63,7 @@ function fetchAnyAPI(url){
       result = data[key];
        var convert = valueData.value * result;
         console.log(valueData.value, result);
-        li.innerHTML = from.value+" "+ convert.toFixed(2);      
+        li.innerHTML = to.value+" "+ convert.toFixed(2);      
      });
     })   
    
@@ -80,7 +80,7 @@ function fetchAnyAPI(url){
     
     }else{
        //combine currency
-      var combine = to.value + "_" + from.value
+      var combine = from.value + "_" + to.value
       console.log(combine);
       let resultData = conversionRate(combine);
     }
